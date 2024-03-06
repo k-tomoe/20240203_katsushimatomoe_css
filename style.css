@@ -1,14 +1,13 @@
 body {
     max-width: 100%;
     height: 100%;
-    margin: 30px;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     color: #00277E;
-    margin-bottom: 20px;
+    margin: 30px;
 }
 
 .header__left {
@@ -26,42 +25,35 @@ body {
     margin: 0 10px;
 }
 
-
-.main {
-    width: 100%;
-    height: 100%;
-    /* height: 100vh; */
-    position: relative;
-}
+/* mainにはcssをつけない、bodyに関連するようにする */
 
 .main__img {
     width: 50%;
     float: right;
-    /* position: absolute;
-    left: 50%; */
-    z-index: 20;
-    display: inline-block;
-
+    /* display: inline-block; */
+    position: relative;
+    z-index: 100;
 }
 
 .main__img img {
     width: 100%;
 }
 
+.main__left {
+    float: left;
+    width: 75%;
+    margin-top: -100px;
+    position: relative;
+    z-index: 0;
+}
+
 
 .main__ttl {
     font-size: 300%;
     font-weight: 150;
-    position: absolute;
-    top: 47vh;
-    display: inline-block;
 }
 
 .main__box {
-    width: 75%;
-    height: 100px;
+    height: 110px;
     background-color: #00277E;
-    z-index: 0;
-    position: absolute;
-    top: 55vh;
 }
